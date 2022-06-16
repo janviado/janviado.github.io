@@ -1,0 +1,200 @@
+html{
+	font-family: Open Sans, sans-serif;
+	font-size: 16px;
+}
+
+
+#navigation{
+	max-width: 80rem;
+	margin: 0 auto;
+	display: flex;
+	align: center;
+}
+
+#navigation .logo{
+  display:block;
+  line-height: 48px;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+
+#navigation .logo img{
+  width: 34px;
+	height: 34px;
+	margin: 3px 2px 0 16px; /* top right bottom left */
+	vertical-align: middle;
+}
+
+.menuButton{
+  border-left: 1px solid #e60505;
+  color: #e60505; /* CBC Red */
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-left: 1.1rem;
+  margin-left: 1.1rem;
+  align-self: center;
+  cursor: pointer; /* GIves a Hand pointer on hover. */
+}
+
+
+.menuButton .chevronIcon{
+  background: #fff;
+  border-radius: 10px;
+  fill: #e60505;
+  margin-left: 2px;
+  padding: 3px 2px 1px;
+}
+
+.menuButton:hover {
+	color: #000; /*Black*/
+}
+
+.menuButton:hover .chevronIcon{
+  background: #e60505;
+	fill: #fff;
+}
+
+
+.spacingDiv{
+  flex-grow: 1;
+}
+
+
+.sideMenu{
+	align-self:center;
+}
+.sideMenu a{
+	display: block;
+	cursor: pointer;
+}
+
+
+/* Submenu Styling*/
+
+#subNav{
+	border-top: 1px solid #eaeaea;
+}
+
+#subNav ul{
+	max-width: 80rem;
+	margin: 0 auto;
+	display: flex;
+	align-items: center; /* centre items along row (or column*/
+	flex-flow: row;
+	min-height: 48px;
+}
+
+#subNav ul li{
+	list-style-type: none; /* removes bullets */
+	white-space: nowrap;
+	flex-basis: auto;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+#subNav ul li a{
+	display: block;
+	padding: 13px 16px;
+	color: #000;
+	text-decoration: none;
+	font-size: .85rem;
+	line-height: 1.4;
+	font-weight: 700;
+}
+
+#subNav ul li a.gem {
+		color: #545454;
+		font-size: 1.1rem;
+		padding: 11px 16px;
+	}
+
+#subNav ul li a:hover {
+		text-decoration: underline;
+
+}
+
+
+
+#adspace{
+  background-color: #e5e5e5;
+  height: 100px;
+	padding: 20px;
+  background-image: url(../img/adspace.gif);
+  background-repeat: no-repeat;
+  background-position: 100% 50%; /* x y */
+}
+
+.advertisement{
+  display: block;
+	margin: 0px auto;
+  width: 740px;
+	height: 90px;
+	background-image: url(../img/advert.jpg);
+  background-size: cover;
+  border: 2px solid #999999;
+
+}
+
+
+/* Main Content Area */
+
+#content {
+	max-width: 80rem;
+	margin: 0 auto;
+	padding: 1rem; /*applies on all sides. */
+}
+
+#content h1 {
+	padding: 0;
+	font-size: 1.2em;
+	font-weight: 700;
+	line-height: 1.7rem;
+	margin: 0.67em 0 0.5em 0;
+	text-transform: uppercase;
+	border-bottom: 1px solid #000;
+}
+
+#content .wrapper {
+	display: flex;
+	align-items: flex-start; /* align to top */
+	flex-flow: row wrap; /* wrap sidebar on small screens */
+}
+
+#content #news{
+	flex-grow: 1;
+	flex-shrink: 1; /* shrink unless content prevents it */
+	flex-basis: 40rem; /*default size (before flex) */
+	background: #ccc;
+	height: 300px
+	/*flex: 1 1 40 rem;*/ /*grow shrink basis */
+}
+
+#content #sidebar{
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 300px;
+	background: #ddd;
+	height: 200px;
+	/*flex: 0 0 300px;*/
+}
+
+#content .testBlock {
+	background: red;
+	height: 50px;
+	color: #fff;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+
+
+
+
+@media (max-width: 1068px){
+	#content #sidebar{
+		flex-grow: 1; /*OVERRIDE*/
+	}
+}
